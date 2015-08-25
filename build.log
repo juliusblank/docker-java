@@ -1,0 +1,17 @@
+Sending build context to Docker daemon  2.56 kB
+Sending build context to Docker daemon 
+Step 0 : FROM ubuntu:14.04
+ ---> 91e54dfb1179
+Step 1 : RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main" | tee -a /etc/apt/sources.list &&     echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu precise main" | tee -a /etc/apt/sources.list &&     echo "oracle-java7-installer shared/accepted-oracle-license-v1-1 select true" | sudo /usr/bin/debconf-set-selections &&     apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886 &&     apt-get update &&     apt-get install -y software-properties-common unzip &&     apt-get -y install oracle-java7-installer
+ ---> Using cache
+ ---> 4f2b9c289e5f
+Step 2 : WORKDIR /data
+ ---> Using cache
+ ---> a731cf6f5a35
+Step 3 : ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
+ ---> Using cache
+ ---> b1301eb47a46
+Step 4 : CMD bash
+ ---> Using cache
+ ---> d411f3ebf726
+Successfully built d411f3ebf726
