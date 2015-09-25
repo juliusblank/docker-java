@@ -10,6 +10,6 @@ RUN apt-get -yqq update && \
 
 ADD jdk-7u17-linux-x64.tar.gz /opt/jdk
 RUN update-alternatives --install /usr/bin/java java /opt/jdk/jdk1.7.0_17/bin/java 100 && \
-    update-alternatives --install /usr/bin/javac javac /opt/jdk/jdk1.7.0_17/bin/java 100
+    update-alternatives --install /usr/bin/javac javac /opt/jdk/jdk1.7.0_17/bin/javac 100
 
 CMD [ "java", "-version" ]
